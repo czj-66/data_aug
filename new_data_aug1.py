@@ -380,8 +380,8 @@ def runAugumentation(image_path, label_path, save_path):
         # t_img, t_boxes = DAD.random_flip_vertical(img, boxes.clone())
         # save_Yolo(t_img, t_boxes, save_path, prefix="fv_", image_name=image_name)
         # # 随机旋转（新增）
-        # t_img, t_boxes = DAD.random_rotate(img, boxes.clone())
-        # save_Yolo(t_img, t_boxes, save_path, prefix="rt_", image_name=image_name)
+        t_img, t_boxes = DAD.random_rotate(img, boxes.clone())
+        save_Yolo(t_img, t_boxes, save_path, prefix="rt_", image_name=image_name)
         # # center_crop
         # t_img, t_boxes = DAD.center_crop(img, boxes.clone(), 1024)
         # save_Yolo(t_img, t_boxes, save_path, prefix="cc_", image_name=image_name)
